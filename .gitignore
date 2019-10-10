@@ -11,6 +11,10 @@
 # production
 /build
 
+# Files
+/src/temp.js
+firebase-debug.log
+
 # misc
 .DS_Store
 .env.local
