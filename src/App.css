@@ -1,243 +1,216 @@
-html, body, #root
-{
-    height: 100%;
-    width: 100%;
+html,
+body,
+#root {
+	height: 100%;
+	width: 100%;
 }
 
-*{
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
 }
 
 .App {
-  text-align: center;
+	text-align: center;
 }
 
 .App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+	animation: App-logo-spin infinite 20s linear;
+	height: 40vmin;
+	pointer-events: none;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+	background-color: #282c34;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-size: calc(10px + 2vmin);
+	color: white;
 }
 
 .App-link {
-  color: #61dafb;
+	color: #61dafb;
 }
 
-.container
-{
-    height: 100%;
-    width: 100%;
-    display: grid;
-    grid-template-areas: 
-        'header header'
-        'lesserYear greaterYear';
-    /*Heights and widths for the grid areas must be set in the parent element for other grid areas to adjust automatically*/
-    grid-template-rows: 200px auto; 
-    grid-template-columns: 50% 50%;
+.container {
+	height: 100%;
+	width: 100%;
+	display: grid;
+	grid-template-areas:
+		'header header'
+		'lesserYear greaterYear';
+	/*Heights and widths for the grid areas must be set in the parent element for other grid areas to adjust automatically*/
+	grid-template-rows: 200px auto;
+	grid-template-columns: 50% 50%;
 }
 
-.header
-{
-    grid-area: header;
-    background: #282c34;
-    display: flex;
-    flex-direction: column;
+.header {
+	grid-area: header;
+	background: #282c34;
+	display: flex;
+	flex-direction: column;
 }
 
-.pageTitle
-{
-    color: whitesmoke;
-    align-self: center;
-    margin-top: 1em;
+.pageTitle {
+	color: whitesmoke;
+	align-self: center;
+	margin-top: 1em;
 }
 
-.yearSelectionContainer
-{
-    flex: 1;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+.yearSelectionContainer {
+	flex: 1;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
 }
 
-.articleContainer
-{
-    height: 100%;
-    width: 100%;
-    overflow: auto;
-    overflow-x: hidden;
+.articleContainer {
+	height: 100%;
+	width: 100%;
+	overflow: auto;
+	overflow-x: hidden;
 }
 
-.lesserYear
-{
-    grid-area: lesserYear;
-    position: relative;
-    border-right: solid 1px #00000020;
-    overflow: hidden;
+.lesserYear {
+	grid-area: lesserYear;
+	position: relative;
+	border-right: solid 1px #00000020;
+	overflow: hidden;
 }
 
-.greaterYear
-{
-    grid-area: greaterYear;
-    position: relative;
-    overflow: hidden;
+.greaterYear {
+	grid-area: greaterYear;
+	position: relative;
+	overflow: hidden;
 }
 
-.card
-{
-    border: 1px solid #00000020;
-    padding: 5px;
-    margin: 2px;
+.card {
+	border: 1px solid #00000020;
+	padding: 5px;
+	margin: 2px;
 }
 
-.card:hover
-{
-    border-color: #FF4F1E;
-    background: #CECCCE;
+.card:hover {
+	border-color: #ff4f1e;
+	background: #ceccce;
 }
 
-.cardTitle
-{
-    font-size: 1em;
-    font-weight: 500;
+.cardTitle {
+	font-size: 1em;
+	font-weight: 500;
 }
 
-.cardDate
-{
-    font-size: 1em;
-    font-weight: normal;
+.cardDate {
+	font-size: 1em;
+	font-weight: normal;
 }
 
-.cardSection
-{
-    font-size: 1em;
-    font-weight: normal;
+.cardSection {
+	font-size: 1em;
+	font-weight: normal;
 }
 
-.article
-{
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    background: #FEFEFA;
-    overflow-x: auto;
-    white-space: pre-line;
-    font-size: 1.1em;
-    border: 2px solid #00000020;
+.article {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	background: #fefefa;
+	overflow-x: auto;
+	white-space: pre-line;
+	font-size: 1.1em;
+	border: 2px solid #00000020;
 }
 
-.articleHeader
-{
-    background: #282c3420;
-    height: 55px;
-    padding: 5px;
+.articleHeader {
+	background: #282c3420;
+	height: 55px;
+	padding: 5px;
 }
 
-.backButton
-{
-    background: #61dafb;
-    padding: 5px;
-    margin: 5px;
-    width: 75px;
-    text-align: center;
-    border-radius: 10px;
-    user-select: none;
-    cursor: pointer;
+.backButton {
+	background: #61dafb;
+	padding: 5px;
+	margin: 5px;
+	width: 75px;
+	text-align: center;
+	border-radius: 10px;
+	user-select: none;
+	cursor: pointer;
 }
 
-.articleDetails
-{
-    display: flex;
-    justify-content: space-between;
-    margin: 10px;
+.articleDetails {
+	display: flex;
+	justify-content: space-between;
+	margin: 10px;
 }
 
-.articleBody
-{
-    padding: 15px;
-    text-align: justify;
+.articleBody {
+	padding: 15px;
+	text-align: justify;
 }
 
-.articleTitle
-{
-    font-size: 20px;
-    margin: 10px;
+.articleTitle {
+	font-size: 20px;
+	margin: 10px;
 }
 
-.articleDate
-{
-    font-size: 16px;
+.articleDate {
+	font-size: 16px;
 }
 
-.articleAuthor
-{
-    font-size: 16px;
+.articleAuthor {
+	font-size: 16px;
 }
 
-.yearSelect
-{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.yearSelect {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
-.yearSelectHeader
-{
-    color: whitesmoke;
-    margin: 5px;
-    min-height: 21px;
+.yearSelectHeader {
+	color: whitesmoke;
+	margin: 5px;
+	min-height: 21px;
 }
 
-.yearInputContainer
-{
-    display: flex;
+.yearInputContainer {
+	display: flex;
 }
 
-.yearLimit
-{
-    padding: 5px;
-    color: whitesmoke;
-    background: #434b58;
-    font-weight: 400;
+.yearLimit {
+	padding: 5px;
+	color: whitesmoke;
+	background: #434b58;
+	font-weight: 400;
 }
 
-.lower
-{
-    border-bottom-left-radius: 20px;
-    border-top-left-radius: 20px;
+.lower {
+	border-bottom-left-radius: 20px;
+	border-top-left-radius: 20px;
 }
 
-.upper
-{
-    border-bottom-right-radius: 20px;
-    border-top-right-radius: 20px;
+.upper {
+	border-bottom-right-radius: 20px;
+	border-top-right-radius: 20px;
 }
 
-.yearLimitViolated
-{
-    color: red;
+.yearLimitViolated {
+	color: red;
 }
 
-.yearInput
-{
-    border: 1px solid #00000020;
-    width: 125px;
-    font-weight: bold;
-    text-align: center;
-    font-size: 18px;
-    padding: 2px;
+.yearInput {
+	border: 1px solid #00000020;
+	width: 125px;
+	font-weight: bold;
+	text-align: center;
+	font-size: 18px;
+	padding: 2px;
 }
